@@ -1,3 +1,21 @@
-show.html.erb
 
-<%= @chef %>
+<div class="chef-banner">
+  <div class="chef-banner-text">
+    <h2><%= @chef.name %></h2>
+    <%=  @chef.category %>
+  </div>
+</div>
+<div class="container mt-4">
+  <div>
+    <%= @chef.description %>
+    <%= @chef.price_range %>
+    <%= @chef.location %>
+  </div>
+
+  <div>
+    <%= link_to "Book Me"%>
+  </div>
+  <div>
+    <%= link_to "Back", chefs_path %>
+  </div>
+</div>
