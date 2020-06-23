@@ -1,11 +1,11 @@
 class ChefsController < ApplicationController
-
   def index
     @chefs = policy_scope(Chef).order(created_at: :desc)
   end
 
   def show
     @chef = Chef.find(params[:id])
+    @booking = Booking.new
     authorize @chef
   end
 
