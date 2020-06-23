@@ -10,10 +10,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_06_22_153419) do
+ActiveRecord::Schema.define(version: 2020_06_23_135915) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "bookings", force: :cascade do |t|
+    t.bigint "chef_id", null: false
+    t.bigint "user_id", null: false
+    t.datetime "start_date"
+    t.datetime "end_date"
+    t.string "location"
+    t.text "event_details"
+    t.integer "nr_guests"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["chef_id"], name: "index_bookings_on_chef_id"
+    t.index ["user_id"], name: "index_bookings_on_user_id"
+  end
 
   create_table "chefs", force: :cascade do |t|
     t.string "name"
@@ -33,8 +47,14 @@ ActiveRecord::Schema.define(version: 2020_06_22_153419) do
     t.datetime "remember_created_at"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "name"
+    t.string "address"
+    t.string "payment_specs"
+    t.boolean "is_chef", default: false
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "bookings", "chefs"
+  add_foreign_key "bookings", "users"
 end

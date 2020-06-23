@@ -3,3 +3,50 @@
 @import "avatar";
 @import "navbar";
 @import "footer";
+
+.header {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: center;
+}
+
+.chef-card {
+  overflow: hidden;
+  height: 150px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.chef-card img {
+  height: 100%;
+  width: 150px;
+  object-fit: cover;
+}
+
+.chef-card h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.chef-card h2 a {
+  color: black;
+}
+
+.chef-card p {
+  font-size: 12px;
+  line-height: 1.4;
+  opacity: .7;
+  margin-bottom: 0;
+  margin-top: 8px;
+}
+
+.chef-card .card-infos {
+  padding: 16px;
+}
+
+#price-range {
+  font-weight: bold;
+}

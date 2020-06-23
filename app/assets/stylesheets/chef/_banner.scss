@@ -1,0 +1,22 @@
+.chef-banner {
+  background: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.4)), url(https://source.unsplash.com/featured/?chef);
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.chef-banner-text {
+    color: white;
+    text-align: center;
+    font-family: "Hind Gutur";
+
+    h2 {
+    font-weight: 900;
+
+    }
+
+}

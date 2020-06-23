@@ -1,0 +1,16 @@
+<h1>Input your chef details</h1>
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+    <%= simple_form_for @chef do |f| %>
+      <%= f.input :name %>
+      <%= f.input :description %>
+      <%= f.input :category %>
+      <%= f.input :price_range %>
+      <%= f.input :location %>
+      <%= f.button :submit %>
+    <% end %>
+    </div>
+  </div>
+</div>
