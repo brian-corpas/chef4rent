@@ -1,3 +1,10 @@
-show.html.erb
+
 
 <%= @chef %>
+
+
+<% @chefs.each do |chef| %>
+  <% if policy(chef).edit? %>
+    <%= link_to "Update", edit_chef_path(chef) %>
+  <% end %>
+<% end %>
