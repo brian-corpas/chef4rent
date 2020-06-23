@@ -9,15 +9,19 @@ class ChefPolicy < ApplicationPolicy
     true
   end
 
+  def show?
+    true
+  end
+
   def create?
-   record.chef == true
+    user.is_chef == true
   end
 
   def update?
-    record.chef == true
+    user.is_chef == true
   end
 
   def destroy?
-    record.chef == true
+    user.is_chef == true
   end
 end
