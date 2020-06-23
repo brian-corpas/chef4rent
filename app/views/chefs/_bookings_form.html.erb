@@ -1,0 +1,8 @@
+<%= simple_form_for(@booking, url: chef_bookings_path(@chef), method: :post) do |f| %>
+  <%= f.input :start_date %>
+  <%= f.input :end_date %>
+  <%= f.input :nr_guests %>
+  <%= f.input :location %>
+  <%= f.input :event_details %>
+  <%= f.button :submit %>
+<% end %>

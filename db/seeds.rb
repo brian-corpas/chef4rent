@@ -12,6 +12,6 @@
     description: Faker::Restaurant.description,
     category: Faker::Restaurant.type,
     price_range: ["$", "$$", "$$$", "$$$$"].sample[0],
-    location: Faker::Address.full_address
+    location: Faker::Address.city
   )
 end
