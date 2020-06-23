@@ -5,4 +5,6 @@ Rails.application.routes.draw do
   resources :chefs do
     resources :bookings, only: [:create, :update]
   end
+
+  get "profile", to: "pages#profile", as: "profile"
 end
