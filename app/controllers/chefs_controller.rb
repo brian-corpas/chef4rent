@@ -1,7 +1,6 @@
 class ChefsController < ApplicationController
 
   def index
-    @chefs = Chef.all
     @chefs = policy_scope(Chef).order(created_at: :desc)
   end
 
