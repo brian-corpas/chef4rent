@@ -13,6 +13,7 @@ class ChefsController < ApplicationController
     @chef = Chef.new
     authorize @chef
     current_user.is_chef = true
+    current_user.save
   end
 
   def create
