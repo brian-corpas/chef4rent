@@ -5,16 +5,7 @@
   </div>
 
 <div class="sub-container d-flex justify-content-between">
-
-  <div class="card mb-3">
-    <div class="card-body">
-    <h4 class="card-title">Your bookings</h4>
-      <ul class="list-group list-group-flush">
-      </ul>
-    </div>
-  </div>
-
-  <div class="card mb-3">
+ <div class="card mb-3">
     <div class="card-body">
       <h4 class="card-title">Your details</h4>
       <ul class="list-group">
@@ -23,10 +14,16 @@
         <li class="list-group-item">Payment details: <%=@user.payment_specs %></li>
         <p class="card-link pt-3 mb-0"><%= link_to "Update my information", edit_user_registration_path %></p>
       </ul>
+    </div>
   </div>
+  <div class="card mb-3">
+    <div class="card-body">
+    <h4 class="card-title">Your bookings</h4>
+      <ul class="list-group list-group-flush">
+      </ul>
+    </div>
   </div>
-  </div>
-
+</div>
 </div>
 
 

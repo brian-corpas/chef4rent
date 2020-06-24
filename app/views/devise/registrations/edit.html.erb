@@ -17,10 +17,14 @@
                 hint: "Enter your current address to optimise search results",
                 required: true,
                 input_html: { autocomplete: "Your address" } %>
-     <%= f.input :payment_specs,
+    <%= f.input :payment_specs,
                 hint: "We need your payment details to process your orders",
                 required: true,
                 input_html: { autocomplete: "XXXX XXXX XXXX XXXX" } %>
+    <%= f.input :profile_picture,
+                hint: "Personalise your account with a profile picture",
+                required: true,
+                input_html: { autocomplete:  } %>
     <%= f.input :password,
                 hint: "Leave blank if you don't want to change it",
                 required: false,
