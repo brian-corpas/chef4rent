@@ -43,26 +43,21 @@
                 </div>
               </div>
             </div>
+
+            <div class="row d-flex justify-content-center" style="margin-top: 3%">
+                <div class="col-align-self-center">
+                   <div class="btn btn-outline-dark">
+                      <%= link_to "Back", profile_path, :class => "btn"%>
+                  </div>
+                </div>
+              </div>
       <% end %>
 
-     
+
 <p>Unhappy?</p>
 <div class="btn btn-outline-danger">
  <%= link_to "Cancel my account", registration_path(resource_name),:class => "btn", data: { confirm: "Are you sure?" }, method: :delete %>
 </div>
 <br>
-  <div class="row d-flex justify-content-center">
-    <div class="col-align-self-center">
-       <div class="btn btn-outline-dark">
-          <%= link_to "Back", profile_path, :class => "btn"%>
 
-      </div>
-      <br>
-        <div class="row d-flex justify-content-center">
-          <div class="col-align-self-center">
-             <div class="btn btn-outline-dark">
-                <%= link_to "Back", profile_path(@user[:id]), :class => "btn"%>
-            </div>
-          </div>
-        </div>
 </div>

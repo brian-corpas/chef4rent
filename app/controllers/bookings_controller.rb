@@ -1,7 +1,6 @@
 class BookingsController < ApplicationController
   def create
     @chef = Chef.find(params[:chef_id])
-    raise
     @booking = Booking.new(booking_params)
     @booking.chef = @chef
     @booking.user = current_user
