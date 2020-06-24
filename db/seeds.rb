@@ -5,6 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Booking.destroy_all
 Chef.destroy_all
 Category.destroy_all
 
@@ -58,13 +59,11 @@ categories = [
 'Thai',
 'Turkish',
 'Ukrainian',
-
 'Vietnamese',
 'Yamal',
 'Zambian',
 'Zanzibari']
-=======
-'Vietnamese']
+
 
 categories.each do |category|
   Category.create(name: category)
