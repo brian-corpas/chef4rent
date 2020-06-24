@@ -7,7 +7,7 @@
       <%= f.input :name %>
       <%= f.input :description %>
       <%= f.input :category %>
-      <%= f.input :price_range %>
+      <%= f.input :price_range, collection: ["$", "$$", "$$$", "$$$$"], prompt: "Select your price range" %>
       <%= f.input :location %>
       <%= f.button :submit %>
     <% end %>
