@@ -1,14 +1,14 @@
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80);">
-  <div class="container">
-    <h1>Want a new gastronimic adventure?</h1>
-    <p>Bellow you have the chance to choose your favourite type of food and you'll have a chef only for your order, try now you won't regret!</p>
-
-
+<div class="banner d-flex align-items-center justify-content-center" style="background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80);">
+  <div class="banner-container">
+    <div>
+      <h1>Want a new gastronimic adventure?</h1>
+      <p>Bellow you have the chance to choose your favourite type of food and you'll have a chef only for your order, try now you won't regret!</p>
+    </div>
     <div class="form-row">
       <div class="col-4 offset-4">
         <form action="/chefs" class="form d-flex justify-content-center">
-            <%= select("category", "category_id", @categories.map { |category| category.name }, { prompt: "Select a cuisine type" }, { class: "search-bar" }) %>
-            <input type="submit" value="Submit" class="btn-search-bar ml-2">
+          <%= select("category", "category_id", @categories.map { |category| category.name }, { prompt: "Select a cuisine type" }, { class: "search-bar" }) %>
+          <input type="submit" value="Submit" class="btn-search-bar ml-2">
         </form>
       </div>
     </div>

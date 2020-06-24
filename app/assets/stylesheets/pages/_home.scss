@@ -36,20 +36,8 @@
   font-family: $button-font;
 }
 
-.banner {
-  height: 500px;
-  text-align: center;
-  margin-left: auto; 
-  margin-right: auto;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-}
-
-.container .p .h1 {
-  line-height: 1.5;
-  display: inline-block;
-  vertical-align: middle;
+.container-text {
+  color: white;
 }
 
 .chef {
