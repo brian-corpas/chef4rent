@@ -5,7 +5,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    
+    <script src="https://kit.fontawesome.com/9d8beae140.js" crossorigin="anonymous"></script>
+    
     <link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300;400;900&family=Hind+Guntur:wght@300;400;700&display=swap" rel="stylesheet">
 
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -16,9 +18,15 @@
 
   <body>
     <%= render 'shared/navbar' %>
-    <%= render 'shared/footer'%>
     <%= render 'shared/flashes' %>
 
     <%= yield %>
+    
+    <footer>
+      <a class="fab fa-facebook-f" href="#" target="blank"></a>
+      <a class="fab fa-instagram" href="#" target="blank"></a>
+      <a class="fab fa-twitter" href="#" target="blank"></a>
+    </footer>
   </body>
+
 </html>

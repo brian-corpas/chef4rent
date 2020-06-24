@@ -6,7 +6,7 @@
 <div class="chef-banner">
   <div class="chef-banner-text">
     <h2><%= @chef.name %></h2>
-    <%=  @chef.category %>
+    <%=  @chef.category.name %>
   </div>
 </div>
 <div class="container mt-2 p-2 d-flex justify-content-between">
@@ -63,7 +63,6 @@
       </div>
       <div class="modal-body">
         <%= render "bookings_form" %>
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
       </div>
       <!-- <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
