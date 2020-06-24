@@ -1,6 +1,8 @@
 class ChefsController < ApplicationController
   def index
     @chefs = policy_scope(Chef).order(created_at: :desc)
+    @category = Category.find_by(name: params[:category][:category_id])
+    @chefs = Chef.where(category_id: @category)
   end
 
   def show

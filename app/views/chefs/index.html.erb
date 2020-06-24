@@ -7,10 +7,10 @@
     <%@chefs.each do |chef| %>
       <div class="col-lg-6 col-md-6">
         <div class="chef-card">
-          <%=image_tag ("https://source.unsplash.com/featured/?#{chef.category}") %>
+          <%=image_tag ("https://source.unsplash.com/featured/?#{chef.category.name}") %>
           <div class="card-infos">
             <h2><%= link_to chef.name, chef_path(chef.id) %></h2>
-            <p><%= chef.category %></p>
+            <p><%= chef.category.name %></p>
             <p id="price-range"><%= chef.price_range %></p>
             <p><%= chef.location %></p>
           </div>
