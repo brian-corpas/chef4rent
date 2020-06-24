@@ -6,7 +6,7 @@
     <%= simple_form_for @chef do |f| %>
       <%= f.input :name %>
       <%= f.input :description %>
-      <%= f.input :category %>
+      <%= f.association :category %>
       <%= f.input :price_range, collection: ["$", "$$", "$$$", "$$$$"], prompt: "Select your price range" %>
       <%= f.input :location %>
       <div class="row d-flex justify-content-center">
