@@ -2,22 +2,15 @@
   <div class="container">
     <h1>Want a new gastronimic adventure?</h1>
     <p>Bellow you have the chance to choose your favourite type of food and you'll have a chef only for your order, try now you won't regret!</p>
-    <%= simple_form_for :search, url: root_path, method: :get do |f| %>
-      <div class="search-form-control form-group">
-        <input class="form-control string required" type="text" name="search[query]" id="search_query" />
-        <button name="button" type="submit" class="btn btn-flat">
-          <i class="fas fa-search"></i>Search
-        </button>
+
+
+    <div class="form-row">
+      <div class="col-4 offset-4">
+        <form action="/chefs" class="form d-flex justify-content-center">
+            <%= select("category", "category_id", @categories.map { |category| category.name }, { prompt: "Select a cuisine type" }, { class: "search-bar" }) %>
+            <input type="submit" value="Submit" class="btn-search-bar ml-2">
+        </form>
       </div>
-    <% end %>
+    </div>
   </div>
 </div>
-
-
-
-<h1>Pages#home</h1>
-
-<p>Put the form in here!</p>
-
-<% if user_signed_in? %> <button class="btn btn-default"> Be a chef! <% end %>
-<p>Find me in app/views/pages/home.html.erb</p>
