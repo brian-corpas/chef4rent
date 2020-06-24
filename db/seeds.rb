@@ -113,7 +113,7 @@ categories = [
 'Vietnamese',
 'Yamal',
 'Zambian',
-'Zanzibari]',
+'Zanzibari']
 
 100.times do
   Chef.create(

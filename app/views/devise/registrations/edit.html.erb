@@ -21,10 +21,10 @@
                 hint: "We need your payment details to process your orders",
                 required: true,
                 input_html: { autocomplete: "XXXX XXXX XXXX XXXX" } %>
-    <%= f.input :profile_picture,
+    <%= f.input :photo,
+                as: :file,
                 hint: "Personalise your account with a profile picture",
-                required: true,
-                input_html: { autocomplete:  } %>
+                required: false %>
     <%= f.input :password,
                 hint: "Leave blank if you don't want to change it",
                 required: false,
