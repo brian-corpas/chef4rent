@@ -2,7 +2,11 @@
   <div class="big-card">
     <div class="top-container d-flex justify-content-between mb-4 welcome-header">
       <h1><%="Welcome back, #{current_user.name}!"%></h1>
-      <button type="button" class="btn btn-outline-success mt-3" id="become-chef"><%= link_to "Become a chef", new_chef_path %></button>
+      <% if current_user.chef.nil? %>
+        <button type="button" class="btn btn-outline-success mt-3" class="become-chef"><%= link_to "Become a chef", new_chef_path %></button>
+      <% else %>
+        <button type="button" class="btn btn-outline-success mt-3" class="become-chef"><%= link_to "Go to my chef profile", chef_profile_path %></button>
+      <% end %>
     </div>
 
     <div class="sub-container d-flex justify-content-between">
