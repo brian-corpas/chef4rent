@@ -8,7 +8,7 @@
       <div class="col-4 offset-4">
         <form action="/chefs" class="form d-flex justify-content-center">
           <%= select("category", "category_id", @categories.map { |category| category.name }, { prompt: "Select a cuisine type" }, { class: "search-bar" }) %>
-          <input type="submit" value="Submit" class="btn-search-bar ml-2">
+          <input type="submit" value="Submit" id="button-book">
         </form>
       </div>
     </div>

@@ -8,5 +8,5 @@ class User < ApplicationRecord
 
   has_many :bookings
   has_many :chefs, through: :bookings
-
+  has_one :chef, dependent: :destroy
 end

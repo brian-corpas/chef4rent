@@ -43,16 +43,16 @@
 
    <div class="row d-flex justify-content-center">
               <div class="col-align-self-center">
-                <div class="btn btn-outline-success">
-                  <%= f.button :submit, "Update", :class => "btn"%>
+                <div>
+                  <%= f.button :submit, "Update", :id => "button-book"%>
                 </div>
               </div>
             </div>
 
             <div class="row d-flex justify-content-center" style="margin-top: 3%">
                 <div class="col-align-self-center">
-                   <div class="btn btn-outline-dark">
-                      <%= link_to "Back", profile_path, :class => "btn"%>
+                   <div>
+                      <%= link_to "Back", profile_path, :class => "btn-back"%>
                   </div>
                 </div>
               </div>
@@ -60,8 +60,8 @@
 
 
 <p>Unhappy?</p>
-<div class="btn btn-outline-danger">
- <%= link_to "Cancel my account", registration_path(resource_name),:class => "btn", data: { confirm: "Are you sure?" }, method: :delete %>
+<div>
+ <%= link_to "Cancel my account", registration_path(resource_name),:class => "btn-delete", data: { confirm: "Are you sure?" }, method: :delete %>
 </div>
 <br>
 
