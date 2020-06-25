@@ -6,6 +6,7 @@ class PagesController < ApplicationController
 
   def profile
     @user = current_user
+    @bookings = Booking.where(user: current_user)
   end
 
   def chef_profile
