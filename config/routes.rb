@@ -7,4 +7,5 @@ Rails.application.routes.draw do
   end
 
   get "profile", to: "pages#profile", as: "profile"
+  get "chef_profile", to: "pages#chef_profile", as: "chef_profile"
 end
