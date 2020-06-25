@@ -4,6 +4,7 @@ class BookingsController < ApplicationController
     @booking = Booking.new(booking_params)
     @booking.chef = @chef
     @booking.user = current_user
+    authorize @booking
     if @booking.save
       redirect_to chef_path(@chef)
     else
@@ -12,6 +13,14 @@ class BookingsController < ApplicationController
   end
 
   def update
+    raise
+    @booking = Booking.find(params[:booking_id])
+    @booking.update(booking_params)
+  end
+
+  def completed?
+    @booking = Booking.find(params[:booking_id])
+    @booking.completed = true
   end
 
   private
