@@ -1,0 +1,6 @@
+<%= simple_form_for [booking, review] do |f| %>
+  <h3>Write your review description</h3>
+  <%= f.input :description %>
+  <%= f.button :submit, id:"btn-create-review" %>
+  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+<% end %>

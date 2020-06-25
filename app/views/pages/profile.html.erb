@@ -52,8 +52,33 @@
                     <div class="specific-info"><i class="fas fa-user-friends"></i> <p><%= booking.nr_guests %></p></div>
                     <div class="specific-info"><i class="fas fa-utensils"></i> <p><%= booking.event_details %></p></div>
                   </div>
-                  <div class="pr-4 pb-2" id="leave-reviews">
-                    <a href="">Leave a review</a>
+                  <!-- MODAL REVIEWS WITH BTN -->
+                  <div id="leave-reviews">
+                   <div class="container mt-5 pt-4">
+                      <div class="row d-flex justify-content-center">
+                        <div class="col-align-self-center">
+                          <span class="btn btn-outline-success" data-toggle="modal" data-target="#booking-<%= booking.id %>">
+                            Add review
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="modal fade" id="booking-<%= booking.id%>" tabindex="-1" role="dialog" aria-labelledby="booking-<%= booking.id%>titlelabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="booking-<%= booking.id%>titlelabel" >Booking Form</h5>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                          <%= render "reviews_form", review: Review.new, booking: booking %>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -64,6 +89,15 @@
     </div>
   </div>
 </div>
+
+
+
+
+
+
+
+
+
 
 
 
