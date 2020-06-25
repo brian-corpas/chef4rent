@@ -14,6 +14,7 @@ class ChefsController < ApplicationController
     @chef = Chef.find(params[:id])
     @booking = Booking.new
     authorize @chef
+    @reviews = Review.where(chef_id)
   end
 
   def new
