@@ -10,7 +10,6 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-
 ActiveRecord::Schema.define(version: 2020_06_25_154153) do
 
   # These are extensions that must be enabled in order to support this database
@@ -98,9 +97,7 @@ ActiveRecord::Schema.define(version: 2020_06_25_154153) do
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "bookings", "chefs"
   add_foreign_key "bookings", "users"
-
+  add_foreign_key "chefs", "categories"
   add_foreign_key "chefs", "users"
-
   add_foreign_key "reviews", "bookings"
-
 end
