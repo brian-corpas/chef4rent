@@ -56,14 +56,14 @@
 <div class="container mt-5 pt-4">
   <div class="row d-flex justify-content-center">
     <div class="col-align-self-center">
-      <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModalLong">
+      <button type="button" class="btn btn-success" data-toggle="modal" data-target="booking_id">
         Add review
       </button>
     </div>
   </div>
 </div>
 
-<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+<div class="modal fade" id="booking_id" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -73,6 +73,6 @@
         </button>
       </div>
       <div class="modal-body">
-        <%= render "reviews_form" %>
+        <%= render "reviews_form", review: Review.new, booking: booking %>
       </div>
 

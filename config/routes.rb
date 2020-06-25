@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   end
 
   resources :bookings do
-    resources :reviews, only: [:new, :create]
+    resources :reviews, only: [:create]
   end
 
   get "profile", to: "pages#profile", as: "profile"
