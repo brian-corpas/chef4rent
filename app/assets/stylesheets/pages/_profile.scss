@@ -1,3 +1,11 @@
+.container {
+  font-family: Montserrat;
+}
+.welcome-header h1 {
+  font-family: Montserrat;
+  font-weight: 700;
+}
+
 #become-chef {
   border-radius: 5px;
 }
@@ -19,7 +27,7 @@
   color: #1EDD88;
 }
 
-#info-card {
+.info-card {
   border-radius: 7px;
 }
 
@@ -29,8 +37,68 @@
 
 #bookings-header {
   border-radius: 7px;
+  border-style: bold;
 }
 
-#verified-info {
+.card-body h4 {
+  font-family: Montserrat;
+}
+
+.info-card #verified-info {
   border-radius: 7px;
+}
+
+.big-card {
+  height: 100%;
+  width: 100%;
+  background: white;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.card-chef img {
+  height: 100%;
+  width: 180px;
+  object-fit: cover;
+}
+
+.card-chef {
+  overflow: hidden;
+  height: 180px;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+}
+
+.card-chef .card-booking-infos {
+  padding: 16px;
+  position: relative;
+}
+
+.card-chef .card-booking-infos #leave-reviews {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+#leave-reviews a {
+  color: #1EDD88;
+}
+
+#verified-info h4 {
+  font-family: Montserrat;
+}
+
+.specific-info {
+  display: flex;
+  p {
+    margin: 0;
+    margin-left: 10px;
+  }
+}
+
+.specific-info-chef {
+  padding-bottom: 10px;
 }
