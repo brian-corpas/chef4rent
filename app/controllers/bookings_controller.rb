@@ -4,6 +4,7 @@ class BookingsController < ApplicationController
     @booking = Booking.new(booking_params)
     @booking.chef = @chef
     @booking.user = current_user
+    authorize @booking
     if @booking.save
       redirect_to chef_path(@chef)
     else
