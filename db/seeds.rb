@@ -58,13 +58,11 @@ categories = [
 'Thai',
 'Turkish',
 'Ukrainian',
-
 'Vietnamese',
 'Yamal',
 'Zambian',
 'Zanzibari']
-=======
-'Vietnamese']
+
 
 categories.each do |category|
   Category.create(name: category)
