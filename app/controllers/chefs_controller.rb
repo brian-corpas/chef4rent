@@ -4,7 +4,7 @@ class ChefsController < ApplicationController
 
   def index
     @chefs = policy_scope(Chef).order(created_at: :desc)
-    if params[:category][:category_id] == ""
+    unless params[:category].present?
       @chefs = Chef.all
     else
       @category = Category.find_by(name: params[:category][:category_id])

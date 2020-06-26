@@ -55,8 +55,8 @@
         </ul>
           <h4 class="card-header border" id="bookings-header">What did your guests say about your cooking skills?</h4>
           <div class="card">
-            <% current_user.bookings.each do |booking|%>
-              <div class="mb-1 ml-2 mt-2"><%= booking.review.description%></div>
+            <% current_user.reviews.each do |review|%>
+              <div class="mb-1 ml-2 mt-2"><%= review.description%></div>
             <% end %>
           </div>
       </div>

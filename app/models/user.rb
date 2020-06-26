@@ -7,6 +7,7 @@ class User < ApplicationRecord
   has_one_attached :photo
 
   has_many :bookings
+  has_many :reviews, through: :bookings
   has_many :chefs, through: :bookings
   has_one :chef, dependent: :destroy
 end
