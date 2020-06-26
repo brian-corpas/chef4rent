@@ -1,0 +1,30 @@
+.booking-box {
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 6px 16px;
+  border-radius: 10px;
+  width: 450px;
+}
+
+.description-box {
+  height: 120px;
+}
+
+.review-box {
+  line-height: 30px;
+  padding-left: 0;
+}
+
+.review-box li {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+
+@media(max-width: 900px) {
+  .main-container {
+    flex-direction: column;
+    align-items: center;
+    .booking-box {
+      margin: 20px 0 !important;
+    }
+  }
+}

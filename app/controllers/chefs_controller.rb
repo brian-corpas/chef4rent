@@ -4,19 +4,19 @@ class ChefsController < ApplicationController
 
   def index
     @chefs = policy_scope(Chef).order(created_at: :desc)
-    if params[:category].nil?
-      @category = Category.find_by(name: params[:category_name])
+    if params[:category][:category_id] == ""
+      @chefs = Chef.all
     else
       @category = Category.find_by(name: params[:category][:category_id])
+      @chefs = Chef.where(category_id: @category)
     end
-    @chefs = Chef.where(category_id: @category)
   end
 
   def show
     @chef = Chef.find(params[:id])
     @booking = Booking.new
     authorize @chef
-    @reviews = Review.where(chef: @chef)
+    # @reviews = Review.where(chef: @chef)
   end
 
   def new
