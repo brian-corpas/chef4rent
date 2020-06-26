@@ -20,4 +20,12 @@ class BookingPolicy < ApplicationPolicy
   def create?
     true
   end
+
+  def accept?
+    user.is_chef == true
+  end
+
+  def decline?
+    user.is_chef == true
+  end
 end
