@@ -13,56 +13,34 @@ Category.destroy_all
 categories = [
 'American',
 'Argentine',
-'Arab',
-'Armenian',
 'Brazilian',
 'Cajun',
 'Cantonese',
 'Caribbean',
 'Chinese',
-'Cypriot',
-'Danish',
 'English',
-'Estonian',
 'French',
 'Filipino',
 'German',
-'Goan',
 'Greek',
 'Indian',
 'Indonesian',
 'Irish',
 'Italian',
-'Jamaican',
 'Japanese',
 'Korean',
-'Kurdish',
 'Lebanese',
-'Lithuanian',
 'Malaysian',
 'Mediterranean',
 'Mexican',
-'Nepalese',
-'Polish',
-'Persian',
 'Peruvian',
 'Portuguese',
-'Romanian',
-'Russian',
-'Serbian',
-'Slovenian',
-'Somali',
-'Soviet',
 'Spanish',
 'Sri Lankan',
 'Taiwanese',
 'Thai',
 'Turkish',
-'Ukrainian',
-'Vietnamese',
-'Yamal',
-'Zambian',
-'Zanzibari']
+'Vietnamese']
 
 
 categories.each do |category|
@@ -70,7 +48,7 @@ categories.each do |category|
 end
 
 
-100.times do
+500.times do
   Chef.create(
     name: Faker::FunnyName.two_word_name,
     description: Faker::Restaurant.description,

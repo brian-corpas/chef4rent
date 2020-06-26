@@ -5,8 +5,8 @@
       <h4><%=  @chef.category.name %></h4>
     </div>
   </div>
-  <div class="container d-flex p-0">
-    <div class="container p-0 mr-2 border d-flex flex-column justify-content-between">
+  <div class="container d-flex p-0 main-container">
+    <div class="container p-0 mr-2 d-flex flex-column justify-content-between description-box">
       <div class="container mt-2 d-flex justify-content-between">
         <div class="row justify-content-center">
           <div class="col-12">
@@ -29,15 +29,15 @@
       </div>
     </div>
 
-    <div class="container ml-5 p-4 border">
+    <div class="container ml-5 p-4 border booking-box">
       <div class="row d-flex justify-content-center">
         <div class="col-align-self-center">
           <div>
             <ul class="qualities-list">
-              <li><i class="fas fa-user-friends"></i>   Super Friendly</li>
-              <li><i class="fas fa-hand-sparkles"></i>   Clean and tidy</li>
-              <li><i class="fas fa-clock"></i>   Always on time</li>
-              <li><i class="fas fa-concierge-bell"></i>   Outstanding service</li>
+              <li><i class="fas fa-user-friends"></i>    Super Friendly</li>
+              <li><i class="fas fa-hand-sparkles"></i>    Clean and tidy</li>
+              <li><i class="fas fa-clock"></i>    Always on time</li>
+              <li><i class="fas fa-concierge-bell"></i>    Outstanding service</li>
             </ul>
           </div>
           <div class="container p-0 d-flex justify-content-center">
@@ -47,6 +47,21 @@
           </div>
         </div>
       </div>
+    </div>
+  </div>
+
+   <div>
+      <% @chef.reviews.each do |review| %>
+      <div class="container d-flex">
+      <% review.rating.times do%>
+        <ul class="review-box">
+          <li><i class="fas fa-star"></i></li>
+        </ul>
+      <% end %>
+    </div>
+      <%= review.description %>
+      <%= review.created_at %>
+      <% end %>
     </div>
   </div>
 
