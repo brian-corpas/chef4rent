@@ -1,29 +1,29 @@
-<div class="container mt-3 mb-3">
-<div class="big-card">
-  <h1><%="Welcome back!"%></h1>
+<div class="profile-content">
+<div class="container">
+<div class="big-card mt-3 mb-3">
+  <div class="top-container mb-3 d-flex justify-content-between welcome-header">
+    <h1><%="Welcome back!"%></h1>
+    <button type="button" id="button-book"><%= link_to "Go back to user profile", profile_path %></button>
+  </div>
   <div class="sub-container d-flex justify-content-between">
-     <div class="card p-3 mb-3" id="info-card">
-        <% if @user.photo.attached? %>
-          <div class="card-img-top d-flex justify-content-center mt-3 mb-2"><%= cl_image_tag @user.photo.key, height: 120, width: 120, crop: :thumb, gravity: :face, radius: :max %></div>
-        <% else %>
-          <svg class="bi bi-person-circle card-img-top d-flex justify-content-center mt-3 mb-3" width="7em" height="7em" viewBox="0 0 16 16" fill="grey" xmlns="http://www.w3.org/2000/svg">
-          <path d="M13.468 12.37C12.758 11.226 11.195 10 8 10s-4.757 1.225-5.468 2.37A6.987 6.987 0 0 0 8 15a6.987 6.987 0 0 0 5.468-2.63z"/>
-          <path fill-rule="evenodd" d="M8 9a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
-          <path fill-rule="evenodd" d="M8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1zM0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8z"/>
-          </svg>
-        <% end %>
+     <div class="card p-3 mb-3 info-card">
+        <div class="card-img-top d-flex justify-content-center"><%= image_tag("undraw_cooking_lyxy.png") %></div>
         <div class="card-body p-2" id="verified-info">
-          <h4 class="card-header border">My details</h4>
+          <h4 class="card-header border" id="details">My details</h4>
           <ul class="list-group border p-1 d-flex">
             <li class="list-group-item d-flex justify-content-between border-0 p-3">Category <svg class="bi bi-check-circle" id="circle" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
             <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
               <path fill-rule="evenodd" d="M10.97 4.97a.75.75 0 0 1 1.071 1.05l-3.992 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.236.236 0 0 1 .02-.022z"/>
             </svg></li>
-            <li class="list-group-item d-flex justify-content-between border-0 p-3">Address <svg class="bi bi-check-circle" id="circle" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <li class="list-group-item d-flex justify-content-between border-0 p-3">Price range <svg class="bi bi-check-circle" id="circle" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
             <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
               <path fill-rule="evenodd" d="M10.97 4.97a.75.75 0 0 1 1.071 1.05l-3.992 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.236.236 0 0 1 .02-.022z"/>
             </svg></li>
-            <li class="list-group-item d-flex justify-content-between border-0 p-3">Payment details<svg class="bi bi-check-circle" id="circle" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <li class="list-group-item d-flex justify-content-between border-0 p-3">Location<svg class="bi bi-check-circle" id="circle" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+              <path fill-rule="evenodd" d="M10.97 4.97a.75.75 0 0 1 1.071 1.05l-3.992 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.236.236 0 0 1 .02-.022z"/>
+            </svg></li>
+            <li class="list-group-item d-flex justify-content-between border-0 p-3">My description<svg class="bi bi-check-circle" id="circle" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
             <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
               <path fill-rule="evenodd" d="M10.97 4.97a.75.75 0 0 1 1.071 1.05l-3.992 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.236.236 0 0 1 .02-.022z"/>
             </svg></li>
@@ -34,15 +34,34 @@
     <div class="card mb-3 flex-grow-1" id="bookings-card">
       <div class="card-body">
       <h4 class="card-header border" id="bookings-header">Check out your requested bookings</h4>
-        <ul class="list-group border-0 mt-3 p-3">
+        <ul class="list-group border-0 mt-2 p-2">
+          <% current_user.bookings.each do |booking| %>
+            <div class="border fa-ul ml-0 mt-2 mb-2 d-flex justify-content-between card-booking">
+         <!--PHOTO CODE LINE -->
+              <div class="card-booking-infos p-2 flex-grow-1" id="booking-infos">
+                <div class="specific-info"><li>User name: <%= booking.user.name %></li></div>
+                <div class="specific-info"><li><b>Date: </b><%= booking.start_date %></li></div>
+                <div class="specific-info"><li><b>Location: </b><%= booking.location%></li></div>
+                <div class="specific-info"><li><b>Number of guests: </b><%= booking.nr_guests %></li></div>
+                <div class="specific-info"><li><b>Booking details: </b><%= booking.event_details %></li></div>
+                    <div class="d-flex justify-content-between">
+                      <button type="button" class="btn btn-outline-success"><%= link_to 'Accept', accept_booking_path(booking) %></button>
+                      <button type="button" class="btn btn-outline-warning"><%= link_to 'Decline', decline_booking_path(booking) %></button>
+                    </div>
+              </div>
 
-          <p> You have not received any booking requests yet.</p>
-
+            </div>
+          <% end %>
         </ul>
+          <h4 class="card-header border" id="bookings-header">What did your guests say about your cooking skills?</h4>
+          <% current_user.bookings.each do |booking|%>
+            <%= booking.review%>
+          <% end %>
       </div>
     </div>
   </div>
   </div>
+</div>
 </div>
 
 

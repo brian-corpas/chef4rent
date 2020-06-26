@@ -123,6 +123,19 @@
 }
 // above is the css code to the scrollbar of the landing page
 
+.container {
+  text-decoration: none;
+}
+
+.card-links {
+  text-decoration: none;
+  color: black;
+ &:hover {
+  text-decoration: none;
+  color: black;
+ }
+}
+
 .card-category {
   background-size: cover;
   background-position: center;

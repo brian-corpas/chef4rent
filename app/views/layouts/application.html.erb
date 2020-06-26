@@ -19,7 +19,7 @@
   <body>
     <%= render 'shared/navbar' %>
     <%= render 'shared/flashes' %>
-    <div class="content">
+    <div class=" <%= "#{ 'profile-' if action_name == 'profile' || action_name == 'chef_profile' }" %>content">
       <%= yield %>
     </div>
     <%= render 'shared/footer' %>
