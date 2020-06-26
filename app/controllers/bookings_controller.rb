@@ -6,7 +6,7 @@ class BookingsController < ApplicationController
     @booking.user = current_user
     authorize @booking
     if @booking.save
-      redirect_to chef_path(@chef)
+      redirect_to profile_path
     else
       redirect_to chef_path(@chef), alert: "Something went wrong"
     end
