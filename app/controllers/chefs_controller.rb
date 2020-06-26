@@ -1,5 +1,7 @@
 class ChefsController < ApplicationController
-  before_action :set_chef, only: [:edit, :update, :destroy, :accept, :decline]
+  skip_before_action :authenticate_user!, only: [:index, :show]
+  before_action :set_chef, only: [:edit, :update, :destroy]
+
   def index
     @chefs = policy_scope(Chef).order(created_at: :desc)
     if params[:category].nil?

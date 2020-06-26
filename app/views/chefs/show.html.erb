@@ -1,51 +1,62 @@
-
-
-
-
-
-<div class="chef-banner">
-  <div class="chef-banner-text">
-    <h2><%= @chef.name %></h2>
-    <%=  @chef.category.name %>
-  </div>
-</div>
-<div class="container mt-2 p-2 d-flex justify-content-between">
-  <div class="row justify-content-center">
-    <div class="col-12">
-      <p>Price Range - <%= @chef.price_range %></p>
+<div class="container">
+  <div class="chef-banner">
+    <div class="chef-banner-text">
+      <h1><%= @chef.name %></h1>
+      <h4><%=  @chef.category.name %></h4>
     </div>
   </div>
-  <div class="row justify-content-center">
-    <div class="col-12">
-      <p>Address - <%= @chef.location %></p>
+  <div class="container d-flex p-0">
+    <div class="container p-0 mr-2 border d-flex flex-column justify-content-between">
+      <div class="container mt-2 d-flex justify-content-between">
+        <div class="row justify-content-center">
+          <div class="col-12">
+            <p>Price Range - <%= @chef.price_range %></p>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-12">
+            <p>Address - <%= @chef.location %></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="container border-top pt-3">
+        <div class="row justify-content-center">
+          <div class="col-12">
+            <p class="text-justify"><%= @chef.description %></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container ml-5 p-4 border">
+      <div class="row d-flex justify-content-center">
+        <div class="col-align-self-center">
+          <div>
+            <ul class="qualities-list">
+              <li><i class="fas fa-user-friends"></i>   Super Friendly</li>
+              <li><i class="fas fa-hand-sparkles"></i>   Clean and tidy</li>
+              <li><i class="fas fa-clock"></i>   Always on time</li>
+              <li><i class="fas fa-concierge-bell"></i>   Outstanding service</li>
+            </ul>
+          </div>
+          <div class="container p-0 d-flex justify-content-center">
+            <button type="button" id="button-book" data-toggle="modal" data-target="#exampleModalLong">
+              Book me
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-</div>
 
-<div class="container border-top pt-3">
-  <div class="row justify-content-center">
-    <div class="col-12">
-      <p class="text-justify"><%= @chef.description %></p>
-    </div>
-  </div>
-</div>
-
-<div class="container mt-5 pt-4">
-  <div class="row d-flex justify-content-center">
-    <div class="col-align-self-center">
-      <button type="button" id="button-book" data-toggle="modal" data-target="#exampleModalLong">
-        Book me
-      </button>
-    </div>
-  </div>
-</div>
-
-<div class="container mt-5 pt-4">
-    <div class="row d-flex justify-content-center">
-     <div class="col-align-self-center">
-        <%= link_to "Back", chefs_path(category_name: @chef.category.name), :class => "btn-back"%>
+  <div class="container mt-5 pt-4">
+      <div class="row d-flex justify-content-center">
+       <div class="col-align-self-center">
+          <%= link_to "Back", chefs_path(category_name: @chef.category.name), :class => "btn-back"%>
+       </div>
      </div>
-   </div>
+  </div>
 </div>
 
 
@@ -69,5 +80,6 @@
     </div>
   </div>
 </div>
+
 
 
