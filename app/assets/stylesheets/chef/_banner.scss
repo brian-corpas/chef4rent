@@ -7,15 +7,17 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100vw;
+  margin: 20px 0;
+  border-radius: 4px;
 }
 
 .chef-banner-text {
     color: white;
     text-align: center;
-    font-family: "Hind Gutur";
+    font-family: "Montserrat";
+    letter-spacing: 4px;
 
-    h2 {
+    h1, h4 {
     font-weight: 900;
 
     }
