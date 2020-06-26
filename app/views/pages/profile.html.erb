@@ -3,12 +3,11 @@
     <div class="top-container d-flex justify-content-between mb-4 welcome-header">
       <h1><%="Welcome back, #{current_user.name}!"%></h1>
       <% if current_user.chef.nil? %>
-        <button type="button" class="btn btn-outline-success mt-3" class="become-chef"><%= link_to "Become a chef", new_chef_path %></button>
+        <button type="button" id="button-book"><%= link_to "Become a chef", new_chef_path %></button>
       <% else %>
-        <button type="button" class="btn btn-outline-success mt-3" class="become-chef"><%= link_to "Go to my chef profile", chef_profile_path %></button>
+        <button type="button" id="button-book"><%= link_to "Go to my chef profile", chef_profile_path %></button>
       <% end %>
     </div>
-
     <div class="sub-container d-flex justify-content-between">
       <div class="profile-container rounded-lg d-flex flex-column mr-2">
         <div class="card p-3 mb-3 info-card">
@@ -22,7 +21,7 @@
             </svg>
           <% end %>
           <div class="card-body p-2" id="verified-info">
-            <h4 class="card-header border">Verified info</h4>
+            <h4 class="card-header border" id="details">Verified info</h4>
             <ul class="list-group border p-1 d-flex">
               <li class="list-group-item d-flex justify-content-between border-0 p-3">Email <svg class="bi bi-check-circle" id="circle" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
               <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
@@ -39,8 +38,12 @@
               <p class="card-link p-2 mb-1 ml-1 text-success" id=update-information><%= link_to "Update my information", edit_user_registration_path %></p>
             </ul>
           </div>
+          <div class="card p-2 mb-1 other-info">
+
+          </div>
         </div>
       </div>
+
 
       <div class="card mb-3 flex-grow-1" id="bookings-card">
         <div class="card-body">
@@ -60,13 +63,18 @@
                   <% end %>
                   </div>
                   <!-- MODAL REVIEWS WITH BTN -->
-                  <div id="leave-reviews">
+                  <div class="mr-2"id="leave-reviews">
                    <div class="container mt-5 pt-4">
                       <div class="row d-flex justify-content-center">
-                        <div class="col-align-self-center">
-                          <span class="btn btn-outline-success" style="z-index: 2" data-toggle="modal" data-target="#booking-<%= booking.id %>">
+
+                        <div class="col-align-self-center mr-2">
+                          <% if booking.review.nil? %>
+                          <span id="button-book" style="z-index: 2" data-toggle="modal" data-target="#booking-<%= booking.id %>">
                             Add review
                           </span>
+                          <% else %>
+                          <%= link_to "View my review", chef_path(booking.chef_id) %>
+                          <% end %>
                         </div>
                       </div>
                     </div>
@@ -76,7 +84,7 @@
                     <div class="modal-dialog" role="document">
                       <div class="modal-content">
                         <div class="modal-header">
-                          <h5 class="modal-title" id="booking-<%= booking.id%>titlelabel" >Booking Form</h5>
+                          <h5 class="modal-title" id="booking-<%= booking.id%>titlelabel" >Fill in your review here: </h5>
                           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                           </button>
