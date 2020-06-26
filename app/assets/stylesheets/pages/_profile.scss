@@ -1,30 +1,39 @@
+.content {
+  background-color: white;
+  // background-image: url('undraw_cooking_lyxy.png');
+  // background-position: left;
+  // background-size: 800px 800px;
+  // opacity: 0.9;
+}
+
 .container {
   font-family: Montserrat;
 }
 .welcome-header h1 {
   font-family: Montserrat;
   font-weight: 700;
+  color: #1D7247;
 }
 
-.become-chef {
-  border-radius: 5px;
-}
+// .become-chef {
+//   border-radius: 5px;
+// }
 
-.become-chef a {
-  color: #1EDD88;
-}
+// .become-chef a {
+//   color: #1EDD88;
+// }
 
-.become-chef a:hover {
-  color: white;
-  text-decoration: none;
-}
+// .become-chef a:hover {
+//   color: white;
+//   text-decoration: none;
+// }
 
 #update-information a {
   color: #878287;
 }
 
 #circle {
-  color: #1EDD88;
+  color: #26A96C;
 }
 
 .info-card {
@@ -38,10 +47,12 @@
 #bookings-header {
   border-radius: 7px;
   border-style: bold;
+  background-color: #EFFBF5;
 }
 
 .card-body h4 {
   font-family: Montserrat;
+  color: #1D7247;
 }
 
 .info-card #verified-info {
@@ -84,7 +95,7 @@
 }
 
 #leave-reviews a {
-  color: #1EDD88;
+  color: #26A96C;
 }
 
 #verified-info h4 {
@@ -102,3 +113,13 @@
 .specific-info-chef {
   padding-bottom: 10px;
 }
+
+#details {
+  background-color: #EFFBF5;
+  color: #1D7247;
+}
+
+#button-book a {
+  color: white;
+}
+
