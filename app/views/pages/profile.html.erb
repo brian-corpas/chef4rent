@@ -1,4 +1,4 @@
-<div class="container mt-3 mb-3">
+<div class="container">
   <div class="big-card">
     <div class="top-container d-flex justify-content-between mb-4 welcome-header">
       <h1><%="Welcome back, #{current_user.name}!"%></h1>
@@ -38,9 +38,6 @@
               <p class="card-link p-2 mb-1 ml-1 text-success" id=update-information><%= link_to "Update my information", edit_user_registration_path %></p>
             </ul>
           </div>
-          <div class="card p-2 mb-1 other-info">
-
-          </div>
         </div>
       </div>
 
@@ -50,7 +47,7 @@
           <ul class="list-group list-group-flush mt-3">
             <% current_user.bookings.each do |booking| %>
               <div class="border-1 fa-ul ml-0 mt-2 card-chef">
-               <%= image_tag ("https://source.unsplash.com/featured/?#{booking.chef.category.name}") %>
+               <%= image_tag ("https://source.unsplash.com/featured/?#{booking.chef.category.name} food") %>
                <div class="card-booking-infos p-2 flex-grow-1">
                   <div class="pl-3" id="booking-infos">
                     <div class="specific-info-chef"><b>My personal chef:</b> <%= booking.chef.name%></div>
