@@ -6,7 +6,7 @@ class BookingsController < ApplicationController
     @booking.user = current_user
     authorize @booking
     if @booking.save
-      redirect_to chef_path(@chef)
+      redirect_to profile_path
     else
       redirect_to chef_path(@chef), alert: "Something went wrong"
     end
@@ -21,6 +21,20 @@ class BookingsController < ApplicationController
   def completed?
     @booking = Booking.find(params[:booking_id])
     @booking.completed = true
+  end
+
+  def accept
+    authorize @chef
+    @booking.status = 'confirmed'
+    @booking.save
+    redirect_to profile_path
+  end
+
+  def decline
+    authorize @chef
+    @booking.status = 'declined'
+    @booking.save
+    redirect_to profile_path
   end
 
   private

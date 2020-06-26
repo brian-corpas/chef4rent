@@ -1,5 +1,5 @@
 class ChefsController < ApplicationController
-  before_action :set_chef, only: [:edit, :update, :destroy]
+  before_action :set_chef, only: [:edit, :update, :destroy, :accept, :decline]
   def index
     @chefs = policy_scope(Chef).order(created_at: :desc)
     if params[:category].nil?

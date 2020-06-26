@@ -7,8 +7,14 @@ Rails.application.routes.draw do
   end
 
   resources :bookings do
+    collection do
+      get :accepted
+      get :declined
+    end
     resources :reviews, only: [:create]
   end
+
+
 
   get "profile", to: "pages#profile", as: "profile"
   get "chef_profile", to: "pages#chef_profile", as: "chef_profile"
