@@ -7,9 +7,9 @@ Rails.application.routes.draw do
   end
 
   resources :bookings do
-    collection do
-      get :accepted
-      get :declined
+    member do
+      get :accept
+      get :decline
     end
     resources :reviews, only: [:create]
   end

@@ -36,16 +36,20 @@
         <ul class="list-group border-0 mt-2 p-2">
           <% current_user.bookings.each do |booking| %>
             <div class="border fa-ul ml-0 mt-2 mb-2 d-flex justify-content-between card-booking">
-              <div class="user-image pl-2">
-                <%= cl_image_tag @user.photo.key, height: 120, width: 120, crop: :thumb, gravity: :face, radius: :max %>
-              </div>
+         <!--PHOTO CODE LINE -->
               <div class="card-booking-infos p-2 flex-grow-1" id="booking-infos">
                 <div class="specific-info"><li>User name: <%= booking.user.name %></li></div>
                 <div class="specific-info"><li><b>Date: </b><%= booking.start_date %></li></div>
                 <div class="specific-info"><li><b>Location: </b><%= booking.location%></li></div>
                 <div class="specific-info"><li><b>Number of guests: </b><%= booking.nr_guests %></li></div>
                 <div class="specific-info"><li><b>Booking details: </b><%= booking.event_details %></li></div>
+                  <div>
+                    <%= link_to 'Accept', accept_booking_path(booking) %>
+                  </div>
               </div>
+                  <div>
+                    <%= link_to 'Decline', decline_booking_path(booking) %>
+                  </div>
             </div>
           <% end %>
         </ul>
